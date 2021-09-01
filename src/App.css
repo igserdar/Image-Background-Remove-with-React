@@ -1,0 +1,225 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+#upload {
+  opacity: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+a {
+  text-decoration: none;
+}
+#upload-label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+.image-area {
+  border: 2px dashed rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+  position: relative;
+}
+
+.image-area::before {
+  content: 'Result';
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+.image-area img {
+  z-index: 2;
+  position: relative;
+}
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+body {
+  font-family: Raleway;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #0065e9, #23a6d5, #23d5ab, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; 
+  line-height: 60px; 
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+
+.text-muted{
+  padding: 5px;
+}
+
+/* Spinner Wrapper */
+.loader {
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.loader-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Spinner */
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 32px 32px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  align-items: center;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgb(245, 243, 243);
+  margin: -3px 0 0 -3px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+  
+}
+.lds-roller div:nth-child(1):after {
+  top: 50px;
+  left: 50px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 54px;
+  left: 45px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 57px;
+  left: 39px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 58px;
+  left: 32px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 57px;
+  left: 25px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 54px;
+  left: 19px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 50px;
+  left: 14px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 45px;
+  left: 10px;
+}
+@keyframes lds-roller {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.down-button {
+  border-radius: 50rem!important;
+  margin-top: 20px;
+  --bs-text-opacity: 1;
+    color: #6c757d!important;
+}
+
+
+
+.remove-button{
+  border-radius: 50rem!important;
+}
+
+.heart {
+  color: #ff4045;
+  -webkit-animation: hearthing 1s ease infinite;
+  animation: hearthing 1s ease infinite;
+}
+
+@-webkit-keyframes hearthing{
+  0%{-webkit-transform:scale(.75);transform:scale(.75)}
+  20%{-webkit-transform:scale(1);transform:scale(1)}
+  40%{-webkit-transform:scale(.75);transform:scale(.75)}
+  60%{-webkit-transform:scale(1);transform:scale(1)}
+  80%{-webkit-transform:scale(.75);transform:scale(.75)}to{-webkit-transform:scale(.75);transform:scale(.75)}}
+@keyframes hearthing{
+  0%{-webkit-transform:scale(.75);transform:scale(.75)}
+  20%{-webkit-transform:scale(1);transform:scale(1)}
+  40%{-webkit-transform:scale(.75);transform:scale(.75)}
+  60%{-webkit-transform:scale(1);transform:scale(1)}
+  80%{-webkit-transform:scale(.75);transform:scale(.75)}to{-webkit-transform:scale(.75);transform:scale(.75)}}
+
